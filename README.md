@@ -1,4 +1,4 @@
-#pageobjectmodel-#webui Automation#PageObjectModel #TestNG
+#pageobjectmodel for web UI java/selenium/testNG
 prerequisite: Java is installed, IDE-eclipse/IntelliJ
 Core logic of the framework- 
 1)TestBase will be Extended by EachTest class
