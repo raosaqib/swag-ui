@@ -1,9 +1,9 @@
 #pageobjectmodel for web UI java/selenium/testNG
-prerequisite: Java is installed, IDE-eclipse/IntelliJ
-Core logic of the framework- 
-1)TestBase will be Extended by EachTest class
-2)Basics will be Extended by each page class.
-3)Every methods exclusing test methods is being implemented in such a way that it should return a value so thatis's easy for assertion
+- prerequisite: Java is installed, IDE-eclipse/IntelliJ
+- Core logic of the framework- 
+- 1)TestBase will be Extended by EachTest class
+- 2)Basics will be Extended by each page class.
+- 3)Every methods exclusing test methods is being implemented in such a way that it should return a value so thatis's easy for assertion
 #Technologies/Tools used in building the framework
 - Eclipse - IDE
 - Maven - Build automation tool
@@ -15,7 +15,7 @@ Core logic of the framework-
 #Framework is being implemented using best practices as describe below
 - Code re-usability-Custom implementation has been done of the selenium inbuild methods in Base class-which is being extended by all the page classes. So no need to write the methods again by using super keyword methods has been called in the page class
 
- Code readability- All the code been implemented by using java language best practices- like use of keyword like-this,super keyword also extends(is a relationship & has a relationship inheritence concept is being used
+- Code readability- All the code been implemented by using java language best practices- like use of keyword like-this,super keyword also extends(is a relationship & has a relationship inheritence concept is being used
 - Scalable automation (demonstrated using multiple test classes)
 - Uses explicit waits/implicit wait- The framework works on explicit waits which is configurable
 - Abstraction layer for UI commands- so no any page object can be changed separately without touching  
