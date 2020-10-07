@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test name="Test">
+		<parameter name="title" value="Swag Labs"></parameter>
+
+		<parameter name="userName" value="standard_user"></parameter>
+		<parameter name="password" value="secret_sauce"></parameter>
+		<parameter name="invalidUserName" value="problem_user"></parameter>
+		<parameter name="wrongPassword" value="xyz"></parameter>
+		<parameter name="homePageTextVal" value="Products"></parameter>
+		<classes>
+			<class name="com.globalkinetic.swaglabs.ui.logintest.LoginTest" />
+			<class
+				name="com.globalkinetic.swaglabs.ui.homepagetest.HomePageTest" />
+			<class
+				name="com.globalkinetic.swaglabs.ui.carttest.CartPageTest" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
