@@ -3,9 +3,14 @@ package com.globalkinetic.swaglabs.basics;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import com.globalkinetic.swaglabs.ui.helper.logger.LoggerHelper;
 import com.globalkinetic.swaglabs.ui.test.helper.wait.WaitHelper;
-
+/**
+ * 
+ * @author rao saqib
+ *
+ */
 public class Basics {
 	Logger log = LoggerHelper.getLogger(Basics.class);
 	WaitHelper waithelper;
@@ -31,12 +36,19 @@ public class Basics {
 	}
 
 	public String getText(WebElement element) {
-		String text = element.getText();
+		try {
+			String text = element.getText();
+			return text;
+		} catch (Throwable t) {
+			t.printStackTrace();
+			System.out.print("t");
+		}
 		return text;
 	}
 
 	protected boolean clickWebelement(WebElement element) {
 		try {
+
 			if (element.isEnabled() || element.isDisplayed()) {
 
 				element.click();
@@ -63,11 +75,34 @@ public class Basics {
 					return true;
 				}
 			}
+
 		} catch (Throwable t) {
 			t.printStackTrace();
 			System.out.print("t");
 		}
 		return false;
+
+	}
+
+	protected void clearTextField(WebElement element) {
+		element.clear();
+	}
+
+	protected void radiobutton_Select(WebElement Radio) throws Throwable {
+		try {
+			boolean checkstatus;
+			checkstatus = Radio.isSelected();
+			if (checkstatus == true) {
+				System.out.println("RadioButton is already checked");
+			} else {
+				Radio.click();
+				System.out.println("Selected the Radiobutton");
+
+			}
+		} catch (Throwable t) {
+			t.printStackTrace();
+			System.out.print("t");
+		}
 	}
 
 	protected boolean isDsiplayed(WebElement element) {

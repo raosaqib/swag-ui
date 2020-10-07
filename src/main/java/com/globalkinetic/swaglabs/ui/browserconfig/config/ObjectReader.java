@@ -1,7 +1,8 @@
 package com.globalkinetic.swaglabs.ui.browserconfig.config;
 
 /**
- * @author rsaqib
+ * 
+ * @author rao saqib
  *
  */
 public class ObjectReader {

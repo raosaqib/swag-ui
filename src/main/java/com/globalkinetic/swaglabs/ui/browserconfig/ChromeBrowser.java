@@ -1,3 +1,4 @@
+
 package com.globalkinetic.swaglabs.ui.browserconfig;
 
 import org.openqa.selenium.WebDriver;
@@ -7,14 +8,22 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.globalkinetic.swaglabs.ui.test.helper.resource.ResourceHelper;
 
+/**
+ * 
+ * @author rao saqib
+ *
+ */
 public class ChromeBrowser {
 
 	public ChromeOptions getChromeOptions() {
+
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("--test-type");
 		option.addArguments("--disable-popup-blocking");
+
 		DesiredCapabilities chrome = DesiredCapabilities.chrome();
 		chrome.setJavascriptEnabled(true);
+
 		option.setCapability(ChromeOptions.CAPABILITY, chrome);
 		// Linux
 		if (System.getProperty("os.name").contains("Linux")) {
@@ -24,6 +33,7 @@ public class ChromeBrowser {
 	}
 
 	public WebDriver getChromeDriver(ChromeOptions cap) {
+
 		if (System.getProperty("os.name").contains("Mac")) {
 			System.setProperty("webdriver.chrome.driver",
 					ResourceHelper.getResourcePath("src/main/resources/drivers/chromedriver"));

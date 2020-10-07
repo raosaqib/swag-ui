@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
 import com.globalkinetic.swaglabs.basics.Basics;
 import com.globalkinetic.swaglabs.ui.browserconfig.config.ObjectReader;
 import com.globalkinetic.swaglabs.ui.helper.logger.LoggerHelper;
@@ -14,6 +13,11 @@ import com.globalkinetic.swaglabs.ui.test.helper.wait.WaitHelper;
 import com.globalkinetic.swaglabs.ui.test.homepage.HomePage;
 import com.globalkinetic.swaglabs.ui.testbase.TestBase;
 
+/**
+ * 
+ * @author rao saqib
+ *
+ */
 public class LoginPage extends Basics {
 
 	private final Logger log = LoggerHelper.getLogger(LoginPage.class);
@@ -31,6 +35,7 @@ public class LoginPage extends Basics {
 	private WebElement login;
 	@FindBy(how = How.CLASS_NAME, using = "error-button")
 	private WebElement errorBtn;
+
 	public LoginPage(WebDriver driver) {
 		super(driver);
 		log.info("Login page initialization");
@@ -46,14 +51,19 @@ public class LoginPage extends Basics {
 		String appltitle = super.getAppTitle();
 		log.info("application title loaded" + appltitle);
 		return appltitle;
+
 	}
+
 	public void enterUserName(String uname) {
 		log.info("Entering  the username");
 		status = super.findElementAndFillText(this.uname, uname);
+
 	}
-public void enterPassword(String pwd) {
+
+	public void enterPassword(String pwd) {
 		log.info("Entering  the password");
 		status = super.findElementAndFillText(this.pwd, pwd);
+
 	}
 
 	public boolean clickOnSignIn() {
@@ -68,19 +78,31 @@ public void enterPassword(String pwd) {
 		this.enterPassword(pwd);
 		this.clickOnSignIn();
 		return new HomePage(driver);
+
 	}
+
 	public LoginPage inValidLogin(String uName, String pwd) {
+
 		this.enterUserName(uName);
 		this.enterPassword(pwd);
 		this.clickOnSignIn();
 		return this;
+
 	}
 
 	public String getApplicationLogo() {
-		element = super.getElement(loginPageLogo);
-		textToValidate = element.getAttribute("class");
-		return textToValidate;
+		try {
+			element = super.getElement(loginPageLogo);
+			textToValidate = element.getAttribute("class");
+
+			return textToValidate;
+		} catch (Throwable t) {
+			t.getStackTrace();
+		}
+		return null;
+
 	}
+
 	public boolean errorMessageButtonDisplayed() {
 		return super.isDsiplayed(errorBtn);
 	}

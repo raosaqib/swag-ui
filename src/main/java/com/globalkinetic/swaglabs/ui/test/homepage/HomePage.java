@@ -14,7 +14,8 @@ import com.globalkinetic.swaglabs.ui.test.helper.wait.WaitHelper;
 import com.globalkinetic.swaglabs.ui.testbase.TestBase;
 
 /**
- * @author rsaqib
+ * 
+ * @author rao saqib
  *
  */
 public class HomePage extends Basics {

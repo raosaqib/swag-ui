@@ -3,11 +3,13 @@ package com.globalkinetic.swaglabs.ui.browserconfig.config;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.Properties;
+
 import com.globalkinetic.swaglabs.ui.browserconfig.BrowserType;
 import com.globalkinetic.swaglabs.ui.test.helper.resource.ResourceHelper;
 
 /**
- * @author rsaqib
+ * 
+ * @author rao saqib
  *
  */
 public class PropertyReader implements ConfigReader {
@@ -50,4 +52,23 @@ public class PropertyReader implements ConfigReader {
 		return OR.getProperty("applicationUrl");
 	}
 
+	@Override
+	public String cartpagheader() {
+		
+		return OR.getProperty("cartpagheader");
+	}
+
+	@Override
+	public String homepageheader() {
+		
+		return OR.getProperty("homepageheader");
+	}
+
+
+	@Override
+	public String getAppTitle() {
+		return OR.getProperty("getAppTitle");
+	}
+
+	
 }

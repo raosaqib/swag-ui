@@ -12,6 +12,7 @@ import com.globalkinetic.swaglabs.ui.test.helper.resource.ResourceHelper;
  *
  */
 public class ExtentManager {
+
 	private static ExtentReports extent;
 
 	public static ExtentReports getInstance() {
@@ -36,4 +37,5 @@ public class ExtentManager {
 		extent.attachReporter(htmlReporter);
 		return extent;
 	}
+
 }

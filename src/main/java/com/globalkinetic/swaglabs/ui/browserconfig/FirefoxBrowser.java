@@ -9,6 +9,11 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.globalkinetic.swaglabs.ui.test.helper.resource.ResourceHelper;
 
+/**
+ * 
+ * @author rao saqib
+ *
+ */
 public class FirefoxBrowser {
 
 	public FirefoxOptions getFirefoxOptions() {

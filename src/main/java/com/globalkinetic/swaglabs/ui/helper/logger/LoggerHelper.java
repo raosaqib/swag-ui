@@ -2,6 +2,7 @@ package com.globalkinetic.swaglabs.ui.helper.logger;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+
 import com.globalkinetic.swaglabs.ui.test.helper.resource.ResourceHelper;
 
 /**

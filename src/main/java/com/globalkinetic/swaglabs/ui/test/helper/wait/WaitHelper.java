@@ -1,13 +1,20 @@
 package com.globalkinetic.swaglabs.ui.test.helper.wait;
 
 import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.globalkinetic.swaglabs.ui.helper.logger.LoggerHelper;
 
+/**
+ * 
+ * @author rao saqib
+ *
+ */
 public class WaitHelper {
 
 	private WebDriver driver;
@@ -48,4 +55,5 @@ public class WaitHelper {
 
 		log.info("element is visible now" + ele);
 	}
+
 }
