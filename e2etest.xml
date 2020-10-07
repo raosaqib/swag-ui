@@ -9,8 +9,6 @@
 		<classes>
 			<class
 				name="com.globalkinetic.swaglabs.ui.e2etests.SwagUserJourney" />
-
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
