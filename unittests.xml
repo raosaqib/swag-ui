@@ -15,9 +15,7 @@
 		<classes>
 			<class name="com.globalkinetic.swaglabs.ui.logintest.LoginTest" />
 			<class name="com.globalkinetic.swaglabs.ui.homepagetest.HomePageTest" />
-
-
-
+			<class name="com.globalkinetic.swaglabs.ui.carttest.CartPageTest"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
