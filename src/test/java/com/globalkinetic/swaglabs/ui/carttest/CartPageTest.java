@@ -29,10 +29,8 @@ public class CartPageTest extends TestBase {
 	@Test(description = "Validate cart has added items")
 	public void validateUserisAbleToAddItemToCart(@Optional("standard_user") String userName,
 			@Optional("secret_sauce") String password) {
-
 		loginpage = new LoginPage(driver);
 		homePgeObj = loginpage.validLogin(userName, password);
-
 		homePgeObj.userIsAbleToAddItemToCart();
 		homePgeObj.userIsAbleToClickOnCartIcon();
 		cartpage = homePgeObj.UserNavigatesTocartpage();
@@ -49,14 +47,12 @@ public class CartPageTest extends TestBase {
 			@Optional("secret_sauce") String password) {
 		loginpage = new LoginPage(driver);
 		homePgeObj = loginpage.validLogin(userName, password);
-
 		homePgeObj.userIsAbleToAddItemToCart();
 		homePgeObj.userIsAbleToClickOnCartIcon();
 		cartpage = homePgeObj.UserNavigatesTocartpage();
 		log.info("card has added items");
 		status = cartpage.clickOnCheckOut();
 		super.logExtentReport("user is able to click on the check out button " + status);
-
 		assertEquals(status, true);
 
 	}
