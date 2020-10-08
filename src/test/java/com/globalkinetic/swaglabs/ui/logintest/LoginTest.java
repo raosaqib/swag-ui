@@ -62,7 +62,7 @@ public class LoginTest extends TestBase {
 	}
 
 	@Parameters({ "invalidUserName", "wrongPassword" })
-	@Test(description = "Validate user is able to login successfully & navigated to home page")
+	@Test(description = "Validate user should remain on login page upon failure on login")
 	public void ValidateSwagAppInvalidLogin(@Optional("problem_user") String invalidUserName,
 			@Optional("wrongpassword") String wrongPassword) throws Throwable {
 
