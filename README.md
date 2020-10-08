@@ -30,10 +30,10 @@ prerequisite: Java is installed, IDE-eclipse/IntelliJ
 
 -clone or  download the code from repo.
 
--  How to run unit test case- go to ant test class and select the @Test method and run it.
+-  How to run unit test case- go to the test class and select the @Test method and run it.
 - How to run Module- navigate to test class and click on run -all the test will run of that class/module
 - How to run from xml file- pass the package name with class name under classes tag-example-unittest.xml-this will run all the test in a unit testing approach-after every test browser will initiate & close.
-- REORTS Reports you can find under src/main/resources..[ Few reports is being committed for demo purpose[It's not the right git practice]
+- REORTS Reports you can find under src/main/resources..latest report will extent.html[ Few reports is being committed for demo purpose[It's not the right git practice]
 - How to run e2e case- navigate to e2etests package and run the class-ex-SwaguserJourney or run the e2etest.xml
 - where to find the report-src/main/resources-reports--extent.html will be there
 - How to change the browser-src/main/resources-config.properties.
