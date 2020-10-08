@@ -3,7 +3,6 @@ package com.globalkinetic.swaglabs.basics;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 import com.globalkinetic.swaglabs.ui.helper.logger.LoggerHelper;
 import com.globalkinetic.swaglabs.ui.test.helper.wait.WaitHelper;
 /**
@@ -17,9 +16,7 @@ public class Basics {
 	WebElement element;
 	String text;
 	boolean status;
-
 	protected WebDriver driver;
-
 	protected Basics(WebDriver driver) {
 		this.driver = driver;
 		waithelper = new WaitHelper(driver);
@@ -114,7 +111,5 @@ public class Basics {
 			System.out.println("element is not displayed");
 			return false;
 		}
-
 	}
-
 }
